@@ -10,13 +10,24 @@ const singerStyle={
   borderRadius:'20px',
 
 }
-const nayak=['rubel','manna','almgir','bapparaj'];
+const nayaks=['rubel','manna','almgir','bapparaj','jolonto jolil','mr mokha','tashan'];
 const heroins=['sabana', 'sabnur', 'moushumi', 'bobita']
+
+
+
 function App() {
   return (
     <div className='App'>
-      <Person name={nayak[0]} heroin={heroins[1]}></Person>
-      <Person name="rajjak" ></Person>
+      {
+        nayaks.map(nayok=>
+          <li>Name: {nayok}</li>
+          )
+      }
+      {
+        nayaks.map(nayok=><Person name={nayok}></Person>)
+      }
+      {/* <Person name={nayaks[0]} heroin={heroins[1]}></Person>
+      <Person name="rajjak" ></Person> */}
       <Friend name="rahman" wife="rini"></Friend>
       <Friend wife="ratna"></Friend>
       
